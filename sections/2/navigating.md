@@ -58,6 +58,6 @@ Use the globe below to try the different navigation techniques:
         wwd.addLayer(new WorldWind.CompassLayer(wwd));
         wwd.addLayer(new WorldWind.AtmosphereLayer());
         wwd.addLayer(new WorldWind.StarFieldLayer());
-    );
+    });
     
 </script>
