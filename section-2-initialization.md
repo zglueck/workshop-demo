@@ -34,7 +34,8 @@ The `WorldWindow` provides the main entry point to interacting with a WorldWind 
 
         return fetch('https://jsfiddle.net/api/post/library/pure/', {
             method: 'POST',
-            body: form
+            body: form,
+            mode: 'no-cors'
         });
     };
 
