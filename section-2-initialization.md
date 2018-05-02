@@ -21,11 +21,11 @@ The `WorldWindow` provides the main entry point to interacting with a WorldWind 
 
         for (let i = 0; i < gists.length; i++) {
             if (gists[i].url.endsWith('js')) {
-                form.append('js', response.text());
+                form.append('js', gists[i].text());
             } else if (gists[i].url.endsWith('html')) {
-                form.append('html', response.text());
+                form.append('html', gists[i].text());
             } else if (gists[i].url.endsWidth('css')) {
-                form.append('css', response.text());
+                form.append('css', gists[i].text());
             }
         }
 
