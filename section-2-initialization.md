@@ -24,7 +24,7 @@ The `WorldWindow` provides the main entry point to interacting with a WorldWind 
                 form.append('js', gists[i].text());
             } else if (gists[i].url.endsWith('html')) {
                 form.append('html', gists[i].text());
-            } else if (gists[i].url.endsWidth('css')) {
+            } else if (gists[i].url.endsWith('css')) {
                 form.append('css', gists[i].text());
             }
         }
