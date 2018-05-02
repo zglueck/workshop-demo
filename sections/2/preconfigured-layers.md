@@ -51,3 +51,5 @@ wwd.addLayer(new WorldWind.StarFieldLayer());
 ```
 
 <script async src="//jsfiddle.net/hjatdgbz/1/embed/"></script>
+
+Explore the other preconfigured layers by editing the jsFiddle. Consult the [document](https://nasaworldwind.github.io/WebWorldWind/) for more information on necessary constructor parameters.
