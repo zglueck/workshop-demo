@@ -5,7 +5,7 @@
     }
 
     #nav-demo-container {
-        background-color: black;
+        background-color:
     }
 
     #nav-demo {
@@ -50,7 +50,7 @@ Use the globe below to try the different navigation techniques:
     </canvas>
 </div>
 
-<script src="https://files.worldwind.arc.nasa.gov/apps/web/worldwind.min.js">
+<script src="https://files.worldwind.arc.nasa.gov/apps/web/worldwind.min.js"></script>
 <script>
     window.addEventListener('load', function () {
         var wwd = new WorldWind.WorldWind("nav-demo");
@@ -58,5 +58,5 @@ Use the globe below to try the different navigation techniques:
         wwd.addLayer(new WorldWind.CompassLayer(wwd));
         wwd.addLayer(new WorldWind.AtmosphereLayer());
         wwd.addLayer(new WorldWind.StarFieldLayer());
-    });
+    
 </script>
