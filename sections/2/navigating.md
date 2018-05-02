@@ -4,8 +4,11 @@
         height: 700px;
     }
 
-    #nav-demo {
+    #nav-demo-container {
         background-color: black;
+    }
+
+    #nav-demo {
         width: 100vw;
         height: 700px;
     }   
@@ -41,12 +44,12 @@ Dragging two fingers tilts the globe.
 
 Use the globe below to try the different navigation techniques:
 
-<canvas id="nav-demo">
-    Browser does not support HTML5
-</canvas>
+<div id="nav-demo-container">
+    <canvas id="nav-demo">
+        Browser does not support HTML5
+    </canvas>
+</div>
 
-
-Some imagery layers will require an API key
 <script src="https://files.worldwind.arc.nasa.gov/apps/web/worldwind.min.js">
 <script>
     window.addEventListener('load', function () {
