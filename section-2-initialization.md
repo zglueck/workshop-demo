@@ -1,3 +1,9 @@
+<style>
+    iframe {
+        width: 100 vw;
+        height: 700px;
+    }    
+</style>
 # Initializing WebWorldWind
 
 The `WorldWindow` provides the main entry point to interacting with a WorldWind globe.
