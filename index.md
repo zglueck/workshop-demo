@@ -6,7 +6,7 @@ WebWorldWind brings the familiar and easy to use functionality of WorldWind to t
 
 2. Essential WorldWind Features
  - Concepts
- - [Initilization](./sections/2/initialization.html)
+ - [Initialization](./sections/2/initialization.html)
  - [Built In Layers](./sections/2/preconfigured-layers.html)
  - Navigating
  - Placemarks
