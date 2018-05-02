@@ -54,4 +54,4 @@ wwd.addLayer(new WorldWind.StarFieldLayer());
 
 Explore the other preconfigured layers by editing the jsFiddle. Consult the [documentation](https://nasaworldwind.github.io/WebWorldWind/) for more information on necessary constructor parameters.
 
-Some imagery layers will require an API key
+Some imagery layers will require an API key. The documentation details the steps necessary to specify your API key.
