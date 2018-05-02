@@ -32,7 +32,7 @@ The `WorldWindow` provides the main entry point to interacting with a WorldWind 
         form.append('title', 'dynamic demo test');
         form.append('wrap', 'd');
 
-        return fetch('https://jsfiddle.net/api/post/library/pure/, {
+        return fetch('https://jsfiddle.net/api/post/library/pure/', {
             method: 'POST',
             body: form
         });
