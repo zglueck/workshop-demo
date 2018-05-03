@@ -1,31 +1,31 @@
-# NASA WebWorldWind Training
+## 1. [How to Build a WorldWind Web App](https://emxsys.github.io/worldwind-web-app-tutorial/)
+1. HTML with Bootstrap
+2. WorldWind Globe
+3. Layer Management
+4. Geocoding
 
----
+## 2. Essential WorldWind Features
+1. Concepts (Dave)
+2. [Initialization](./sections/2/initialization.html) (Zach)
+3. [Built In Layers](./sections/2/preconfigured-layers.html) (Zach)
+4. [Navigation](./sections/2/navigation.html) (Zach)
+5. [Placemarks](./sections/2/placemarks.html) (Zach)
+6. Polygons, and Polylines (Zach)
+7. Text (Dave)
+8. Selection (Dave)
 
-WebWorldWind brings the familiar and easy to use functionality of WorldWind to the Web. We've compiled a short course to familiarize users with WebWorldWind functionality. We encourage you to work through the short lessons to learn more and move into creating your application domain as quickly as possible.
-
-2. Essential WorldWind Features
-    - Concepts (Dave)
-    - [Initialization](./sections/2/initialization.html) (Zach)
-    - [Built In Layers](./sections/2/preconfigured-layers.html) (Zach)
-    - [Navigation](./sections/2/navigation.html) (Zach)
-    - [Placemarks](./sections/2/placemarks.html) (Zach)
-    - Polygons, and Polylines (Zach)
-    - Text (Dave)
-    - Selection (Dave)
-
-3. Your Data Inside WorldWind
-    - Imagery (Zach)
-        - Surface Images and GeoTiff
-        - OGC Web Map Service (WMS) and Web Map Tile Service (WMTS)
-    - Formats (Dave)
-        - GeoJSON
-        - Shapefile
-        - GeoTiff
-    - KML and Collada (Dave)
+## 3. Your Data Inside WorldWind
+1. Imagery (Zach)
+   * OGC Web Map Service (WMS)
+   * OGC Web Map Tile Service (WMTS)
+   * GeoTIFF
+2. Formats (Dave)
+   * GeoJSON
+   * OGC WKT 
+   * Shapefile
+3. KML and Collada (Dave)
  
-4. New Capabilities (Since v0.9.0)
-    - OGC Web Coverage Service (WCS)(Zach)
-    - Navigation (Dave)
-    - Multiple elevation sources (Dave)
- 
+## 4. New Capabilities (since version 0.9.0) and Roadmap
+1. OGC Web Coverage Service (WCS) (Zach)
+2. Navigation (Dave)
+4. Multiple elevation sources (Dave)
