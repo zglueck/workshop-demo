@@ -65,6 +65,7 @@ var roll = wwd.navigator.roll;
 
 var heading = wwd.navigator.heading;
 ```
+
 <script async src="//jsfiddle.net/nasazach/14ufn7hL/12/embed/"></script>
 
 2. Set the position of the navigator to view Mount Yale in Colorado:
@@ -72,6 +73,7 @@ var heading = wwd.navigator.heading;
 wwd.navigator.lookAtLocation.latitude = 38.87165744775558;
 ...
 ```
+
 <script async src="//jsfiddle.net/nasazach/14ufn7hL/10/embed/"></script>
 
 3. Rotate the view 360 degrees to see the surrounding peaks.
@@ -81,6 +83,7 @@ setInterval(function () {
     wwd.redraw();
   }, 10);
 ```
+
 <script async src="//jsfiddle.net/nasazach/14ufn7hL/11/embed/"></script>
 
 
