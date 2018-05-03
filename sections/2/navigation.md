@@ -10,16 +10,17 @@
         height: 700px;
     }   
 </style>
-# Navigating WebWorldWind
+# WebWorldWind Navigation
 
-The WorldWind globe responds to mouse and touch inputs. A Navigator is used to position the eye or view point. Some inputs change the position of the globe while others change the positioning of the Navigator. WebWorldWind uses a "look at" setup for defining the eye position. The definition of a "look at" system can be described with the following graphic:
+The WorldWind globe responds to mouse and touch inputs. A Navigator is used to position the eye or view point based on inputs. Some inputs change the position of the globe while others change the positioning of the Navigator. WebWorldWind uses a "look at" setup for defining the eye position. The definition of a "look at" system can be described with the following graphic:
 
 ![Look At Diagram](../../resources/images/lookat.png)
 
 The Navigator state is expressed as:
- - the latitude and longitude of a "look at" location
- - the range from the "look at" location to the eye
- - the tilt
+ - latitude and longitude of a "look at" location
+ - range from the "look at" location to the eye
+ - tilt angle from a "straight down" view
+ - heading based on a typical northern aligned 360 degree compass
 
 ### Mouse Inputs
 
@@ -62,38 +63,38 @@ If you require more explicit control of the navigator, the position, and orienta
 
 1. Retrieve and display the current navigators latitude, longitude, range, tilt, rotation, and heading:
 
-```
-var location = wwd.navigator.lookAtLocation;
-
-var range = wwd.navigator.range;
-
-var tilt = wwd.navigator.tilt;
-
-var roll = wwd.navigator.roll;
-
-var heading = wwd.navigator.heading;
-```
-
-<script async src="//jsfiddle.net/nasazach/14ufn7hL/12/embed/"></script>
+    ```
+    var location = wwd.navigator.lookAtLocation;
+    
+    var range = wwd.navigator.range;
+    
+    var tilt = wwd.navigator.tilt;
+    
+    var roll = wwd.navigator.roll;
+    
+    var heading = wwd.navigator.heading;
+    ```
+    
+    <script async src="//jsfiddle.net/nasazach/14ufn7hL/12/embed/"></script>
 
 2. Set the position of the navigator to view Mount Yale in Colorado:
 
-```
-wwd.navigator.lookAtLocation.latitude = 38.87165744775558;
-...
-```
+    ```
+    wwd.navigator.lookAtLocation.latitude = 38.87165744775558;
+    ...
+    ```
+    
+    <script async src="//jsfiddle.net/nasazach/14ufn7hL/10/embed/"></script>
 
-<script async src="//jsfiddle.net/nasazach/14ufn7hL/10/embed/"></script>
+3. Continuously modify the heading to rotate the view to see the surrounding peaks:
 
-3. Rotate the view 360 degrees to see the surrounding peaks.
-
-```
-setInterval(function () {
-  	wwd.navigator.heading += 0.1;
-    wwd.redraw();
-  }, 10);
-```
-
+    ```
+    setInterval(function () {
+        wwd.navigator.heading += 0.1;
+        wwd.redraw();
+      }, 10);
+    ```
+    
 <script async src="//jsfiddle.net/nasazach/14ufn7hL/11/embed/"></script>
 
 
