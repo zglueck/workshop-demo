@@ -54,6 +54,7 @@ Controlling navigation can be done with an input device, or programmatically. Fo
 If you require more explicit control of the navigator, the position, and orientation are provided by the `navigator` property of the `WorldWindow`.
 
 1. Retrieve and display the current navigators latitude, longitude, range, tilt, rotation, and heading:
+
 ```
 var location = wwd.navigator.lookAtLocation;
 
@@ -69,6 +70,7 @@ var heading = wwd.navigator.heading;
 <script async src="//jsfiddle.net/nasazach/14ufn7hL/12/embed/"></script>
 
 2. Set the position of the navigator to view Mount Yale in Colorado:
+
 ```
 wwd.navigator.lookAtLocation.latitude = 38.87165744775558;
 ...
@@ -77,6 +79,7 @@ wwd.navigator.lookAtLocation.latitude = 38.87165744775558;
 <script async src="//jsfiddle.net/nasazach/14ufn7hL/10/embed/"></script>
 
 3. Rotate the view 360 degrees to see the surrounding peaks.
+
 ```
 setInterval(function () {
   	wwd.navigator.heading += 0.1;
