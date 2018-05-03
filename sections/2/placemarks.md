@@ -43,7 +43,7 @@ Placemarks are customizable point markers that maintain their orientation to the
   
     Now you'll notice the white dot stays on top of the terrain and is not obsured as you move the camera closer.
     
-5. The default white dot is pretty boring, while we could change the color and size, why not utilize their logo? To utilize a logo we need to point to the images URL using a `PlacemarkAttributes` object. Then we need to provide the attributes to the placemark.
+5. The default white dot is pretty boring, while we could change the color and size, why not utilize the appropriate logo? To utilize a logo we need to point to the images URL using a `PlacemarkAttributes` object. Then we need to provide the attributes to the placemark.
 
     ```javascript
     var breckenridgeAttributes = new WorldWind.PlacemarkAttributes();
@@ -51,4 +51,26 @@ Placemarks are customizable point markers that maintain their orientation to the
     breckenridge.attributes = breckenridgeAttributes;
     ```
     
+    <script async src="//jsfiddle.net/nasazach/5uz10mxc/4/embed/"></script>
     
+6. The logo is better than the white dot, but it is enormous and becomes obscured by terrain at different viewing orientations. Let's enable autoscaling which will scale the image at extreme ranges. The scaling is limited, at a certain range threshold the logo will maintain its size independent of the range. Additionally, let's offset the logo so that it appears "above" our provided position.
+
+    ```javascript
+    breckenridge.eyeDistanceScaling = true;
+    breckenridgeAttributes.imageOffset = new WorldWind.Offset(
+       WorldWind.OFFSET_FRACTION, 0.5,
+       WorldWind.OFFSET_FRACTION, 0);
+    ```
+    
+    <script async src="//jsfiddle.net/nasazach/5uz10mxc/5/embed/"></script>
+    
+We've just completed creating a basic Placemark with a label and logo. Placemark includes additional functionality including:
+- Leader Lines
+- Highlight Attributes
+- Canvas element image sources
+- Label attributes
+- Label offsets
+
+Please see the [Placemarks and Picking](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/PlacemarksAndPicking.html) and [Custom Placemarks](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/CustomPlacemarks.html) examples for demonstrations of these additional features.
+
+[Index](../../)
