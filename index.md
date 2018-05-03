@@ -15,8 +15,14 @@
 8. Selection (Dave)
 
 ## 3. Your Data Inside WorldWind
-1. Imagery (OGC Web Map Service (WMS) and Web Map Tile Service (WMTS), GeoTIFF) (Zach)
-2. Formats (Shapefile, GeoJSON, WKT) (Dave)
+1. Imagery (Zach)
+   OGC Web Map Service (WMS)
+   OGC Web Map Tile Service (WMTS)
+   GeoTIFF
+2. Formats (Dave)
+   GeoJSON
+   OGC WKT 
+   Shapefile
 3. KML and Collada (Dave)
  
 ## 4. New Capabilities (since version 0.9.0) and Roadmap
