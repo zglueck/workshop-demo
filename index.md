@@ -8,7 +8,7 @@ WebWorldWind brings the familiar and easy to use functionality of WorldWind to t
  - Concepts (Dave)
  - [Initialization](./sections/2/initialization.html) (Zach)
  - [Built In Layers](./sections/2/preconfigured-layers.html) (Zach)
- - Navigation (Zach)
+ - [Navigation](./sections/2/navigation.md) (Zach)
  - Placemarks (Zach)
  - Polygons, and Polylines (Zach)
  - Text (Dave)

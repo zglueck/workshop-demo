@@ -12,18 +12,25 @@
 </style>
 # Navigating WebWorldWind
 
-The WorldWind globe responds to mouse and touch inputs.
+The WorldWind globe responds to mouse and touch inputs. A Navigator is used to position the eye or view point. Some inputs change the position of the globe while others change the positioning of the Navigator. WebWorldWind uses a "look at" setup for defining the eye position. The definition of a "look at" system can be described with the following graphic:
+
+![Look At Diagram](../../resources/images/lookat.png)
+
+The Navigator state is expressed as:
+ - the latitude and longitude of a "look at" location
+ - the range from the "look at" location to the eye
+ - the tilt
 
 ### Mouse Inputs
 
 #### Left Click
-Left clicking on the surface of the globe "grabs" the globe and allows you to drag the globe surface. 
+Left clicking and dragging on the surface of the globe "grabs" the globe and allows you to rotate the globe surface. 
 
 #### Scroll Wheel
-The scroll wheel zooms in and out. 
+The scroll wheel moves the eye point towards and away from the look at position. 
 
 #### Right Click
-Right clicking and dragging up or down tilts the the camera. Right clicking and dragging left or right rotates the globe.
+Right clicking and dragging up or down tilts the the eye while still maintaining the same look at position. Right clicking and dragging left or right rotates the heading of eye.
 
 ### Touch Inputs
 
@@ -31,7 +38,7 @@ Right clicking and dragging up or down tilts the the camera. Right clicking and 
 A single touch operates similarly to the left click when using a mouse by dragging the globe.
 
 #### Pinching
-A two finger pinch will zoom in or out.
+A two finger pinch will move the eye point towards and away from the look at position.
 
 #### Two Finger Rotation
 Two fingers rotating around each other will rotate the globe.
@@ -91,7 +98,7 @@ setInterval(function () {
 
 
 <!-- Source for adding the plain globe -->
-<script src="https://files.worldwind.arc.nasa.gov/apps/web/worldwind.min.js"></script>
+<script src="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/worldwind.min.js"></script>
 <script>
     window.addEventListener('load', function () {
         var wwd = new WorldWind.WorldWindow("nav-demo");
