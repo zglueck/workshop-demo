@@ -5,7 +5,7 @@
 4. Geocoding
 
 ## 2. Essential WorldWind Features
-1. Concepts (Dave)
+1. [Concepts](./sections2/concepts.html) (Dave)
 2. [Initialization](./sections/2/initialization.html) (Zach)
 3. [Built In Layers](./sections/2/built-in-layers.html) (Zach)
 4. [Navigation](./sections/2/navigation.html) (Zach)
