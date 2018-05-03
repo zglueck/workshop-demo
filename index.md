@@ -7,10 +7,10 @@
 ## 2. Essential WorldWind Features
 1. Concepts (Dave)
 2. [Initialization](./sections/2/initialization.html) (Zach)
-3. [Built In Layers](./sections/2/preconfigured-layers.html) (Zach)
+3. [Built In Layers](./sections/2/built-in-layers.html) (Zach)
 4. [Navigation](./sections/2/navigation.html) (Zach)
 5. [Placemarks](./sections/2/placemarks.html) (Zach)
-6. Polygons, and Polylines (Zach)
+6. [Polygons and Polylines](./sections/2/shapes.html) (Zach)
 7. Text (Dave)
 8. Selection (Dave)
 
