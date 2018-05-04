@@ -12,7 +12,7 @@
 5. [Placemarks](./sections/2/placemarks.html) (Zach)
 6. [Polygons and Paths](./sections/2/shapes.html) (Zach)
 7. Text (Dave)
-8. [Selection](./sections2/selection.html) (Dave)
+8. [Selection](./sections/2/selection.html) (Dave)
 
 ## 3. Your Data Inside WorldWind
 1. Imagery (Zach)
