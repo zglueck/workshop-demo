@@ -5,14 +5,14 @@
 4. Geocoding
 
 ## 2. Essential WorldWind Features
-1. [Concepts](./sections/2/concepts.html) (Dave)
-2. [Initialization](./sections/2/initialization.html) (Zach)
-3. [Built In Layers](./sections/2/built-in-layers.html) (Zach)
-4. [Navigation](./sections/2/navigation.html) (Zach)
-5. [Placemarks](./sections/2/placemarks.html) (Zach)
-6. [Polygons and Paths](./sections/2/shapes.html) (Zach)
+1. [Concepts](./sections/2/concepts.html)
+2. [Initialization](./sections/2/initialization.html)
+3. [Built In Layers](./sections/2/built-in-layers.html)
+4. [Navigation](./sections/2/navigation.html)
+5. [Placemarks](./sections/2/placemarks.html)
+6. [Polygons and Paths](./sections/2/shapes.html)
 7. Text (Dave)
-8. Selection (Dave)
+8. [Selection](./sections/2/selection.html)
 
 ## 3. Your Data Inside WorldWind
 1. Imagery (Zach)
