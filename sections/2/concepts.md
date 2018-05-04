@@ -10,7 +10,7 @@ Web WorldWind is a virtual globe that you embed in web pages. It provides an int
 
 WorldWind provides a collection of components that interactively display 3D geographic information within a browser. WorldWind components are extensible. The API is defined primarily by interfaces, so components can be selectively replaced by alternative components. Concrete classes can also be replaced or extended. Extensibility is a fundamental objective of WorldWind.
 
-This figure illustrates Web WorldWind's overall architecture. Objects in orange are objects in the app domain. Items in grey represent objects work WorldWind performs behind the scenes to retrieve data from the network and draw what the user sees.
+This figure illustrates Web WorldWind's architecture. Objects in orange are in the app domain. Items in grey represent work WorldWind performs behind the scenes to retrieve data from the network and draw what the user sees.
 
 ![WorldWind Architecture Diagram](../../resources/images/architecture.svg)
 
