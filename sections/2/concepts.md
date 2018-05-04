@@ -39,3 +39,5 @@ WorldWind works with enormous quantities of data and information, all of which e
 # Selection
 
 WorldWind can determine the displayed objects at a given screen point, typically the mouse point or a the location of a touch gesture. It can also determine the geographic position beneath the cursor. Selection operations are provided from simple functions on WorldWindow.
+
+[Index](../../)
