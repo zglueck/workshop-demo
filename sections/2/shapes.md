@@ -9,23 +9,35 @@
 WebWorldWind provides several options for creating shapes and paths. This lesson will walk through the different options available.
 
 1. Start by creating and adding a `RenderableLayer` that will host the Path generated for this lesson. Be sure to add the layer to the WorldWindow.
+
     ```javascript
-    var simplePaths = new WorldWind.RenderableLayer("Simple Paths");
-    wwd.addLayer(simplePaths);
+    var dfwAirTraffic = new WorldWind.RenderableLayer("DFW Air Traffic");
+    wwd.addLayer(dfwAirTraffic);
+    ```
+    
+2. Like `Placemarks`, the attributes of a `Path` are controlled by an attribute object. For shapes, this is the `ShapeAttribute` object. Let's customize the attributes by creating an attribute object for the air track and customize the color,  add an extrusions from the path positions to the ground to create a curtain, and color the curtain a different color than the track:
+
+    ```javascript
+       var flightTrackAttributes = new WorldWind.ShapeAttributes();
+       flightTrackAttributes.outlineColor = new WorldWind.Color(0, 1, 0, 1);
+       flightTrackAttributes.interiorColor = new WorldWind.Color(0, 0, 1, 0.25);
+       flightTrackAttributes.drawVerticals = true;
     ```
 
-2. Create a simple path outlining the borders of Colorado. We need an array of `Positions` to describe the path:
+3. Create a `Path` plotting the outbound leg of a flight from Dallas/Fort Worth airport (DFW): The `WorldWind.Position` array has been pre-populated for you in jsFiddle. Specify the flight track attributes as the second argument:
 
     ```javascript
     var positions = [
-       new WorldWind.Position(40.708895, -75.007148, 0), // New York
-       new WorldWind.Position(37.414709, -122.061325, 0), // California
-    ];
-    var transcontinentalPath = new WorldWind.Path(positions);
-    simplePaths.addRenderable(transcontinentalPath);
+        new WorldWind.Position(32.89970, -97.02780, 182.88),
+        new WorldWind.Position(32.93580, -97.02640, 304.8),
+     ...
+    ]; 
+
+    var outboundFlight = new WorldWind.Path(positions, flightTrackAttributes);
+    outboundFlight.extrude = true; // Create a curtain from the track to the ground
+    dfwAirTraffic.addRenderable(outboundFlight);
     ```
+
+    <script async src="//jsfiddle.net/nasazach/14ufn7hL/14/embed/"></script>
     
-3. The path won't be visible at this point because of the zero altitude values, let's set the altitude mode to `WorldWind.CLAMP_TO_GROUND` to make the path appear on the terrain:
-    ```javascript
-    transcontinentalPath.altitudeMode = WorldWind.CLAMP_TO_GROUND;
-    ```
+4. 
