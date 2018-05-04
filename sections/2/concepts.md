@@ -12,7 +12,7 @@ WorldWind components are extensible. The API is defined primarily by interfaces,
 
 There are four major WorldWind interfaces, all shown in the following diagram.
 
-WorldWind Java Interface Diagram
+![WorldWind Architecture Diagram](../../resources/images/architecture.svg)
 
 All the objects above can be those provided by WorldWind or those developed by application developers. Objects implementing a particular interface may be used wherever that interface is called for.
 
