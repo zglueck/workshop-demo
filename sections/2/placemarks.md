@@ -68,7 +68,7 @@ We've just completed creating a basic Placemark with a label and logo. Placemark
 - Leader Lines
 - Highlight Attributes
 - Canvas element image sources
-- Label attributes
+- Label Attributes
 - Label offsets
 
 Please see the [Placemarks and Picking](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/PlacemarksAndPicking.html) and [Custom Placemarks](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/CustomPlacemarks.html) examples for demonstrations of these additional features.
