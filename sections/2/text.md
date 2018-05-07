@@ -69,7 +69,7 @@ ScreenText's `screenOffset` and its TextAttribute's `offset` can be configured t
 
 ## Putting it All Together
 
-<script async src="//jsfiddle.net/pdavidc/84bvgm1p/3/embed/"></script>
+<script async src="//jsfiddle.net/pdavidc/84bvgm1p/embed/"></script>
 
 Consult the [API documentation](https://nasaworldwind.github.io/WebWorldWind/) for details on the text object classes.
 
