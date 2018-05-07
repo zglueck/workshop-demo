@@ -54,10 +54,5 @@ Some imagery layers will require an API key. The documentation details the steps
 
 # Next Steps
     
-* [Lesson 2: Initialization](./initialization.html)
-* [Lesson 4: Navigation](./navigation.html)
-
----
-
-[Home](../../)
-
+* [Home](../../)
+* [Lesson 2.4: Navigation](./navigation.html)

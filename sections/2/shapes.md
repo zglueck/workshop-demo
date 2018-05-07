@@ -121,11 +121,11 @@ All of the shapes created to this point have been oriented above the terrain and
      
 # Next Steps
     
-* [Lesson 5: Placemarks](./placemarks.html)
-* [Lesson 7: Text](./text.html)
+* [Home](../../)
+* [Lesson 2.7: Text](./text.html)
 
 ---
 
-[Home](../../)
+
 
 

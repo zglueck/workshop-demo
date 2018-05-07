@@ -76,11 +76,11 @@ Please see the [Placemarks and Picking](https://files.worldwind.arc.nasa.gov/art
 
 # Next Steps
     
-* [Lesson 4: Navigation](./navigation.html)
-* [Lesson 6: Polygons and Paths](./shapes.html)
+* [Home](../../)
+* [Lesson 2.6: Polygons and Paths](./shapes.html)
 
 ---
 
-[Home](../../)
+
 
 

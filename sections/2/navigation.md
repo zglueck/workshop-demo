@@ -99,12 +99,8 @@ If you require more explicit control of the navigator, the position, and orienta
 
 # Next Steps
     
-* [Lesson 3: Built In Layers](./built-in-layers.html)
-* [Lesson 5: Placemarks](./placemarks.html)
-
----
-
-[Home](../../)
+* [Home](../../)
+* [Lesson 2.5: Placemarks](./placemarks.html)
 
 <!-- Source for adding the plain globe -->
 <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js"></script>
