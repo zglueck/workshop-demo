@@ -16,7 +16,7 @@
 * [Lesson 2.9: Using UI Frameworks: React](sections/2/react.html)
 * [Lesson 2.10: Using the Latest WorldWind Features](sections/2/develop.html)
 
-## [3. Your Data Inside WorldWind](sections/3/)
+## 3. [Your Data Inside WorldWind](sections/3/)
 * [Lesson 3.1: Imagery](sections/3/imagery.html)
    * OGC Web Map Service (WMS)
    * OGC Web Map Tile Service (WMTS)
