@@ -61,7 +61,7 @@ WebWorldWind includes the `WmsLayer` for displaying WMS imagery. The `WmsLayer` 
     
     _Note: we'll be using a plain `XMLHttpRequest` to make the actual asynchronous request._
     
-    <script async src="//jsfiddle.net/nasazach/gdae1co1/2/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/gdae1co1/3/embed/"></script>
     
 4. At this point, let's assume you want to load a particular layer. To create the layer inside WebWorldWind you use the `WmsLayer` object. The `WmsLayer` object takes a configuration object based on the `WmsLayerCapabilities` object. A utility method on `WmsLayer` named `formLayerConfiguration` is available which will automatically generate the configuration object. For simplicity, let's remove the layer listing functionality from the parsing callback and add the configuration object generation and layer creation:
 
@@ -81,7 +81,7 @@ WebWorldWind includes the `WmsLayer` for displaying WMS imagery. The `WmsLayer` 
     }
     ```
     
-    <script async src="//jsfiddle.net/nasazach/1m76tnmp/1/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/1m76tnmp/2/embed/"></script>
     
 This completes a demonstration of WebWorldWind's most commonly used WMS features. The flexbility of the configuration object allow applications to fully customize the layer creation process or rely on WorldWind to do the work. This pattern is repeated for many of the OGC services.
 
@@ -134,7 +134,7 @@ WebWorldWind includes the `WmtsLayer` which displays tiled maps from a WMTS. The
      
    _Note: we'll be using a plain `XMLHttpRequest` to make the actual asynchronous request._
    
-   <script async src="//jsfiddle.net/nasazach/1nj5eho0/3/embed/"></script>
+   <script async src="//jsfiddle.net/nasazach/1nj5eho0/4/embed/"></script>
    
 4. At this point, let's assume you want to load a particular layer. To create the layer inside WebWorldWind you use the `WmtsLayer` object. The `WmtsLayer` object takes a configuration object based on the `WmtsLayerCapabilities` object. A utility method on `WmtsLayer` named `formLayerConfiguration` is available which will automatically generate the configuration object. The `formLayerConfiguration` function will throw an `ArgumentError` if a supported tile matrix set is not found from the service. For simplicity, let's remove the layer listing functionality from the parsing callback and add the configuration object generation and layer creation:
 
@@ -154,7 +154,7 @@ WebWorldWind includes the `WmtsLayer` which displays tiled maps from a WMTS. The
     }
     ```
     
-    <script async src="//jsfiddle.net/nasazach/qmLgg6dc/1/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/qmLgg6dc/2/embed/"></script>
 
 While one must be aware of the tile matrix support limitations, WMTS configuration and use is very similar to WMS in WebWorldWind.
 

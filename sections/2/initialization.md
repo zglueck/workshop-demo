@@ -23,7 +23,7 @@ The `WorldWindow` provides the main entry point to interacting with a WorldWind 
     wwd.addLayer(new BMNGLayer());
     ```
 
-    <script async src="//jsfiddle.net/nasazach/hjatdgbz/2/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/hjatdgbz/3/embed/"></script>
 
 # Next Steps
     
