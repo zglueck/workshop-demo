@@ -27,8 +27,7 @@
    * Shapefile
 * [Lesson 3.3: KML and Collada](sections/3/kml-collada.html)
  
-## 4. [Beyond 0.9.0](sections/4/)
-* [OGC Web Coverage Service (WCS)](sections/4/wcs.html)
-* [Enhanced Navigation](sections/4/navigation.html)
-* [Multiple elevation sources](sections/4/elevations.html)
-* [Roadmap](https://worldwind.arc.nasa.gov/blog/roadmap/)
+## 4. [Next Steps for WorldWind](sections/4/)
+* [Sneak Peek: OGC Web Coverage Service (WCS) and compound elevations](sections/4/wcs.html)
+* [WorldWind Website](https://worldwind.arc.nasa.gov)
+* [WorldWind Roadmap](https://worldwind.arc.nasa.gov/blog/roadmap/)
