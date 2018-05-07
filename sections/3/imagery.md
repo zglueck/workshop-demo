@@ -204,9 +204,5 @@ WebWorldWind provides a GeoTiff parser which has good support for the most commo
     
 # Next Steps
     
-* [Lesson 2.10: Using the Latest WorldWind Features](./develop.html)
-* [Lesson 3.2: Formats](./formats.html)
-
----
-
-[Home](../)
+* [Home](../../)
+* [Lesson 3.2: Formats](formats.html)

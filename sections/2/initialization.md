@@ -27,10 +27,5 @@ The `WorldWindow` provides the main entry point to interacting with a WorldWind 
 
 # Next Steps
     
-* [Lesson 1: Concepts](./concepts.html)
-* [Lesson 3: Built In Layers](./built-in-layers.html)
-
----
-
-[Home](../../)
-
+* [Home](../../)
+* [Lesson 2.3: Built In Layers](./built-in-layers.html)
