@@ -14,7 +14,6 @@
 * [Lesson 2.7: Text](sections/2/text.html)
 * [Lesson 2.8: Selection](sections/2/selection.html)
 * [Lesson 2.9: Using UI Frameworks: React](sections/2/react.html)
-* [Lesson 2.10: Using the Latest WorldWind Features](sections/2/develop.html)
 
 ## 3. [Your Data Inside WorldWind](sections/3/)
 * [Lesson 3.1: Imagery](sections/3/imagery.html)
@@ -29,5 +28,6 @@
  
 ## 4. [Next Steps for WorldWind](sections/4/)
 * [Sneak Peek: OGC Web Coverage Service (WCS) and compound elevations](sections/4/wcs.html)
+* [Using the Latest WorldWind Features](sections/4/latest-features.html)
 * [WorldWind Website](https://worldwind.arc.nasa.gov)
 * [WorldWind Roadmap](https://worldwind.arc.nasa.gov/blog/roadmap/)
