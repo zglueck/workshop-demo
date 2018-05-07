@@ -158,4 +158,45 @@ WebWorldWind includes the `WmtsLayer` which displays tiled maps from a WMTS. The
 
 While one must be aware of the tile matrix support limitations, WMTS configuration and use is very similar to WMS in WebWorldWind.
 
+## GeoTiff
+
+WebWorldWind provides a GeoTiff parser which has good support for the most common GeoTiff formats. In this lesson we'll demonstrate how to use WebWorldWind's GeoTiff parsing functionality to retrieve a GeoTiff, parse it, and display the image as a surface image on the globe.
+
+1. The primary class for interacting with GeoTiffs in WebWorldWind is the `GeoTiffReader` class. The class requires a javascript array buffer in the constructor; however, a static function provides asynchronous image retrieval and parsing for convenience:
+
+    ```javascript
+    var geotiffAddress = "https://zglueck.github.io/workshop-demo/images/geotiff-demo.tif";
+    WorldWind.GeoTiffReader.retrieveFromUrl(geotiffAddress, function(geoTiffReader) {
+       // TODO operate on parsed data
+    });
+    ``` 
+
+2. The `GeoTiffReader` provides two primary accessors for the data within the GeoTiff. The `getImage` method evaluates the data as an image format and creates and returns a `canvas` element. The `getImageData` method evaluates the data as scalar quantities distributed over the geographic coordinate space and returns a javascript typed array with the values. The demo GeoTiff specified in step one is an image. We'll get the image data and append the image to the webpage below the globe. Instead of detailing the callback in-line with the static retrieval function, we'll define the parser callback separately:
+
+    ```javascript
+    var onGeoTiffRetrieval = function (geoTiffReader) {
+       document.getElementsByTagName("body")[0].appendChild(geoTiffReader.getImage());
+    };
+ 
+    var geotiffAddress = "https://zglueck.github.io/workshop-demo/images/geotiff-demo.tif";
+    WorldWind.GeoTiffReader.retrieveFromUrl(geotiffAddress, onGeoTiffRetrieval);
+    ```
+
+3. Instead of displaying the GeoTiff on the webpage, you can use a WorldWind `SurfaceImage` to display the image on the globe by modifying the parser completion callback:
+
+    ```javascript
+    var onGeoTiffRetrieval = function (geoTiffReader) {
+    
+       var surfaceGeoTiff = new WorldWind.SurfaceImage(
+           geoTiffReader.metadata.bbox,
+           new WorldWind.ImageSource(geoTiffReader.getImage())
+       );
+
+       geoTiffLayer.addRenderable(surfaceGeoTiff);
+       wwd.redraw();
+    }
+    ```
+    
+
+    
 [Index](../../)
