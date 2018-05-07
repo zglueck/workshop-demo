@@ -119,5 +119,13 @@ All of the shapes created to this point have been oriented above the terrain and
     
     Consult the [documentation](https://nasaworldwind.github.io/WebWorldWind/) for more information on how to use these shapes.
      
-[Index](../../)
- 
+# Next Steps
+    
+* [Lesson 5: Placemarks](./placemarks.html)
+* [Lesson 7: Text](./text.html)
+
+---
+
+[Home](../../)
+
+

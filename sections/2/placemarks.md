@@ -73,4 +73,13 @@ We've just completed creating a basic Placemark with a label and logo. Placemark
 
 Please see the [Placemarks and Picking](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/PlacemarksAndPicking.html) and [Custom Placemarks](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/CustomPlacemarks.html) examples for demonstrations of these additional features.
 
-[Index](../../)
+# Next Steps
+    
+* [Lesson 4: Navigation](./navigation.html)
+* [Lesson 6: Polygons and Paths](./shapes.html)
+
+---
+
+[Home](../../)
+
+

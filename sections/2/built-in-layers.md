@@ -51,3 +51,13 @@ This lesson will demonstrate how to add some of these preconfigured layers to th
 Explore the other preconfigured layers by editing the jsFiddle. Consult the [documentation](https://nasaworldwind.github.io/WebWorldWind/) for more information on necessary constructor parameters.
 
 Some imagery layers will require an API key. The documentation details the steps necessary to specify your API key.
+
+# Next Steps
+    
+* [Lesson 2: Initialization](./initialization.html)
+* [Lesson 4: Navigation](./navigation.html)
+
+---
+
+[Home](../../)
+

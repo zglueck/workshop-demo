@@ -109,3 +109,13 @@ If you require more explicit control of the navigator, the position, and orienta
         wwd.addLayer(new WorldWind.StarFieldLayer());
     });
 </script>
+
+# Next Steps
+    
+* [Lesson 3: Built In Layers](./built-in-layers.html)
+* [Lesson 5: Placemarks](./placemarks.html)
+
+---
+
+[Home](../../)
+
