@@ -7,5 +7,5 @@
 
 # Next Steps
 
-* [Home](../)
-* [Beyond 0.9.0](../sections/4)
+* [Home](../../)
+* [Beyond 0.9.0](../../sections/4)
