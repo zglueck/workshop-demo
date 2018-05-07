@@ -7,4 +7,4 @@
 
 # Next Steps
 
-* [Home](../)
+* [Home](../../)
