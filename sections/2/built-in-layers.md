@@ -46,8 +46,18 @@ This lesson will demonstrate how to add some of these preconfigured layers to th
     wwd.addLayer(new WorldWind.StarFieldLayer());
     ```
     
-    <script async src="//jsfiddle.net/hjatdgbz/1/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/hjatdgbz/4/embed/"></script>
 
 Explore the other preconfigured layers by editing the jsFiddle. Consult the [documentation](https://nasaworldwind.github.io/WebWorldWind/) for more information on necessary constructor parameters.
 
 Some imagery layers will require an API key. The documentation details the steps necessary to specify your API key.
+
+# Next Steps
+    
+* [Lesson 2: Initialization](./initialization.html)
+* [Lesson 4: Navigation](./navigation.html)
+
+---
+
+[Home](../../)
+

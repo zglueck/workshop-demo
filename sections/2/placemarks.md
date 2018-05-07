@@ -33,7 +33,7 @@ Placemarks are customizable point markers that maintain their orientation to the
     resortLocations.addRenderable(breckenridge);
     ```
     
-    <script async src="//jsfiddle.net/nasazach/5uz10mxc/2/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/5uz10mxc/6/embed/"></script>
     
 4. The default appearance of the placemark is a small white dot which happens to disappear as you move the camera closer. This due to terrain obscuring the dot because we did not modify the altitude mode of the placemark to `CLAMP_TO_GROUND`. Specifying the altitude mode is done by:
 
@@ -51,7 +51,7 @@ Placemarks are customizable point markers that maintain their orientation to the
     breckenridge.attributes = breckenridgeAttributes;
     ```
     
-    <script async src="//jsfiddle.net/nasazach/5uz10mxc/4/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/5uz10mxc/7/embed/"></script>
     
 6. The logo is better than the white dot, but it is enormous and becomes obscured by terrain at different viewing orientations. Let's enable autoscaling which will scale the image at extreme ranges. The scaling is limited, at a certain range threshold the logo will maintain its size independent of the range. Additionally, let's offset the logo so that it appears "above" our provided position.
 
@@ -59,10 +59,11 @@ Placemarks are customizable point markers that maintain their orientation to the
     breckenridge.eyeDistanceScaling = true;
     breckenridgeAttributes.imageOffset = new WorldWind.Offset(
        WorldWind.OFFSET_FRACTION, 0.5,
-       WorldWind.OFFSET_FRACTION, 0);
+       WorldWind.OFFSET_FRACTION, 0
+    );
     ```
     
-    <script async src="//jsfiddle.net/nasazach/5uz10mxc/5/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/5uz10mxc/8/embed/"></script>
     
 We've just completed creating a basic Placemark with a label and logo. Placemark includes additional functionality including:
 - Leader Lines
@@ -73,4 +74,13 @@ We've just completed creating a basic Placemark with a label and logo. Placemark
 
 Please see the [Placemarks and Picking](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/PlacemarksAndPicking.html) and [Custom Placemarks](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/CustomPlacemarks.html) examples for demonstrations of these additional features.
 
-[Index](../../)
+# Next Steps
+    
+* [Lesson 4: Navigation](./navigation.html)
+* [Lesson 6: Polygons and Paths](./shapes.html)
+
+---
+
+[Home](../../)
+
+

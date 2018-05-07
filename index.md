@@ -15,7 +15,7 @@
 8. [Selection](./sections/2/selection.html)
 
 ## 3. Your Data Inside WorldWind
-1. Imagery (Zach)
+1. [Imagery](./sections/3/imagery.html) (Zach)
    * OGC Web Map Service (WMS)
    * OGC Web Map Tile Service (WMTS)
    * GeoTIFF

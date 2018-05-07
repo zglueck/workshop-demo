@@ -40,7 +40,7 @@ WebWorldWind provides several options for creating shapes and paths. This lesson
     demoLayer.addRenderable(outboundFlight);
     ```
 
-    <script async src="//jsfiddle.net/nasazach/x2fouvLh/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/x2fouvLh/1/embed/"></script>
     
 4. Let's add a polygon to the globe. Polygons are similar to Path objects but connect the start and end points to create a closed shape. Polygons also support images and "holes". Let's add a polygon surrounding the last track point of the aircraft with a "hole" in the center. Creating a polygon with holes requires an array of boundaries with the first element containing an array of the outer boundaries and the second containing an array of the interior boundary.
     ```javascript
@@ -78,7 +78,7 @@ WebWorldWind provides several options for creating shapes and paths. This lesson
     demoLayer.addRenderable(aircraftPolygon);
     ```
     
-    <script async src="//jsfiddle.net/nasazach/8ynazm07/1/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/8ynazm07/2/embed/"></script>
 
 ## Surface Shapes
     
@@ -100,7 +100,7 @@ All of the shapes created to this point have been oriented above the terrain and
     demoLayer.addRenderable(colorado);
     ```
     
-    <script async src="//jsfiddle.net/nasazach/fLn52m08/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/fLn52m08/1/embed/"></script>
     
 2. If you think the shape of Colorado doesn't look quite right, you're right! By default, surface shapes interpolate the intermediate positions between boundary locations using a great circle path. As Colorado is one of only four states purely defined by lines of latitude and longitude, we need to change the `pathType` of our Colorado surface polygon to `WorldWind.LINEAR`.
 
@@ -108,7 +108,7 @@ All of the shapes created to this point have been oriented above the terrain and
     colorado.pathType = WorldWind.LINEAR;
     ```
     
-    <script async src="//jsfiddle.net/nasazach/nkqzker4/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/nkqzker4/1/embed/"></script>
 
 3. In addition to the flexible `SurfacePolygon`, WebWorldWind provides a number of other convienence shapes which generate the appropriate geographic representations given common dimensional parameters. The other shapes include:
     
@@ -119,5 +119,13 @@ All of the shapes created to this point have been oriented above the terrain and
     
     Consult the [documentation](https://nasaworldwind.github.io/WebWorldWind/) for more information on how to use these shapes.
      
-[Index](../../)
- 
+# Next Steps
+    
+* [Lesson 5: Placemarks](./placemarks.html)
+* [Lesson 7: Text](./text.html)
+
+---
+
+[Home](../../)
+
+

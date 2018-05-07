@@ -75,7 +75,7 @@ If you require more explicit control of the navigator, the position, and orienta
     var heading = wwd.navigator.heading;
     ```
     
-    <script async src="//jsfiddle.net/nasazach/14ufn7hL/12/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/14ufn7hL/15/embed/"></script>
 
 2. Set the position of the navigator to view Mount Yale in Colorado:
 
@@ -84,7 +84,7 @@ If you require more explicit control of the navigator, the position, and orienta
     ...
     ```
     
-    <script async src="//jsfiddle.net/nasazach/14ufn7hL/10/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/14ufn7hL/16/embed/"></script>
 
 3. Continuously modify the heading to rotate the view to see the surrounding peaks:
 
@@ -95,11 +95,19 @@ If you require more explicit control of the navigator, the position, and orienta
       }, 10);
     ```
     
-<script async src="//jsfiddle.net/nasazach/14ufn7hL/11/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/14ufn7hL/17/embed/"></script>
 
+# Next Steps
+    
+* [Lesson 3: Built In Layers](./built-in-layers.html)
+* [Lesson 5: Placemarks](./placemarks.html)
+
+---
+
+[Home](../../)
 
 <!-- Source for adding the plain globe -->
-<script src="https://files.worldwind.arc.nasa.gov/artifactory/apps/web/worldwind.min.js"></script>
+<script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js"></script>
 <script>
     window.addEventListener('load', function () {
         var wwd = new WorldWind.WorldWindow("nav-demo");
