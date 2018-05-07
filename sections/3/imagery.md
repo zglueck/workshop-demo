@@ -175,28 +175,35 @@ WebWorldWind provides a GeoTiff parser which has good support for the most commo
 
     ```javascript
     var onGeoTiffRetrieval = function (geoTiffReader) {
-       document.getElementsByTagName("body")[0].appendChild(geoTiffReader.getImage());
+      document.getElementsByTagName("body")[0].appendChild(geoTiffReader.getImage());
     };
- 
-    var geotiffAddress = "https://zglueck.github.io/workshop-demo/images/geotiff-demo.tif";
+    
+    var geotiffAddress = "https://zglueck.github.io/workshop-demo/resources/images/geotiff-demo.tif";
     WorldWind.GeoTiffReader.retrieveFromUrl(geotiffAddress, onGeoTiffRetrieval);
     ```
+
+    <script async src="//jsfiddle.net/nasazach/fo2zxwth/1/embed/"></script>
 
 3. Instead of displaying the GeoTiff on the webpage, you can use a WorldWind `SurfaceImage` to display the image on the globe by modifying the parser completion callback:
 
     ```javascript
     var onGeoTiffRetrieval = function (geoTiffReader) {
     
-       var surfaceGeoTiff = new WorldWind.SurfaceImage(
-           geoTiffReader.metadata.bbox,
-           new WorldWind.ImageSource(geoTiffReader.getImage())
-       );
-
-       geoTiffLayer.addRenderable(surfaceGeoTiff);
-       wwd.redraw();
-    }
+        var surfaceGeoTiff = new WorldWind.SurfaceImage(
+            geoTiffReader.metadata.bbox,
+            new WorldWind.ImageSource(geoTiffReader.getImage())
+        );
+        
+        var geoTiffLayer = new WorldWind.RenderableLayer("GeoTiff Image");
+        wwd.addLayer(geoTiffLayer);
+        geoTiffLayer.addRenderable(surfaceGeoTiff);
+        wwd.redraw();
+        
+        wwd.goTo(new WorldWind.Position(43.69, 28.54, 55000));
+    };
     ```
     
+    <script async src="//jsfiddle.net/nasazach/jv3t6ysy/2/embed/"></script>
 
     
 [Index](../../)
