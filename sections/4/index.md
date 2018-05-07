@@ -5,6 +5,8 @@
 * [WorldWind Website](https://worldwind.arc.nasa.gov)
 * [WorldWind Roadmap](https://worldwind.arc.nasa.gov/blog/roadmap/)
 
-# End of Workshop
+# Next Steps
 
 * [Home](../../)
+* [Explore WorldWind](https://worldwind.arc.nasa.gov)
+* [Contact WorldWind](https://worldwind.arc.nasa.gov/contact/)
