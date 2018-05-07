@@ -13,5 +13,5 @@
 
 # Next Steps
 
-* [Home](../)
-* [Your Data Inside WorldWind](../sections/3)
+* [Home](../../)
+* [Your Data Inside WorldWind](../../sections/3)
