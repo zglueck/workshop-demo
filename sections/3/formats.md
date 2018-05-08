@@ -67,6 +67,8 @@ wwd.addLayer(formatsLayer);
     ```
     
     <script async src="//jsfiddle.net/nasazach/v89g9emL/1/embed/"></script>
+
+4. The `geometry` property provided in the callback allows you to interogate the GeoJSON shape and assign attributes based on the type of shape. For a more in depth example, see the GeoJSON example ([source](https://github.com/NASAWorldWind/WebWorldWind/examples/GeoJSON.js), [live demo](https://files.worldwind.arc.nasa.gov/apps/web/examples/GeoJSON.html)) included in the repository.
  
 # Next Steps
     
