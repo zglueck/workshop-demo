@@ -27,7 +27,7 @@ wwd.addLayer(formatsLayer);
     geojsonParser.load(null, null, formatsLayer);
     ```
     
-    <script async src="//jsfiddle.net/nasazach/vc4fe341/3/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/vc4fe341/embed/"></script>
 
 2. Let's add a notification that GeoJSON parsing is complete with a completion callback:
 
