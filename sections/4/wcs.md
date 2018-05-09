@@ -4,7 +4,9 @@
         height: 700px;
     }
 </style>
-# WebWorldWind WebCoverageService (WCS)
+# Sneak Peek: OGC Web Coverage Service (WCS) and compound elevations
+
+## OGC Web Coverage Service (WCS)
 
 The Open Geospatial Consortium's (OGC) Web Coverage Service (WCS) is unique from the other OGC services. WCS has a two distinct capabilities documents (capabilities and coverage description) and the differences between versions is far more pronounced than WMS. To facilitate use of a WCS the WorldWind team wanted to abstract the version negotiation and configuration process. The goal is to provide an easy to use API for reviewing and using a WCS without having to worry about version specific nuances.
 
@@ -40,7 +42,23 @@ This lesson will walk through how to use the new `WebCoverageService` class. Ple
 
 3. The `WcsCoverage` object maintains a bundle of commonly used properties. It abstracts the WCS object model format to communicate common properties required by WebWorldWind
 
+## Compound Elevations
+
+With WCS, applications need a way to display all the elevations of interest. To support this, we've introduced the `ElevationCoverage` class, and redesigned `ElevationModel` as a container of coverages. Like the WorldWindow's layer list, applications can configure the elevation model with one coverage, many coverages, or no coverages. The model's coverage list and individual coverage properties are flexible enough to change dynamically at runtime. For example, coverages may be added once a WCS connection is made, or a coverage may be enabled/disabled in reponse to a UI action.
+
+WorldWind is initialized with a set of default coverages that retrieve terrain from the WorldWind servers at NASA Ames Research Center. Applications may remove these coverages, or agument them by adding their own.
+
+We'll begin by removing WorldWind's default coverages. The result is a smooth WGS84 ellipsoid:
+
+```javascript
+var elevationModel = wwd.globe.elevationModel;
+elevationModel.removeAllCoverages();
+wwd.redraw();
+```
+
+<script async src="//jsfiddle.net/pdavidc/cexmpd1y/embed/"></script>
+
 # Next Steps
     
 * [Home](../../)
-* [Lesson 4.2: Enhanced Navigation](tbd.html)
+* [Using the Latest WorldWind Features](latest-features.html)
