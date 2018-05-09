@@ -46,8 +46,6 @@ WebWorldWind WMS and WMTS operations have required the client to create the url 
 
     <script async src="//jsfiddle.net/nasazach/3j3zx43k/embed/"></script>
 
-3. The `WcsCoverage` object maintains a bundle of commonly used properties. It abstracts the WCS object model format to communicate common properties required by WebWorldWind
-
 ## Compound Elevations
 
 With WCS, applications need a way to display all the elevations of interest. To support this, we've introduced the `ElevationCoverage` class, and redesigned `ElevationModel` as a container of coverages. Like the WorldWindow's layer list, applications can configure the elevation model with one coverage, many coverages, or no coverages. The model's coverage list and individual coverage properties are flexible enough to change dynamically at runtime. For example, coverages may be added once a WCS connection is made, or a coverage may be enabled/disabled in reponse to a UI action.
