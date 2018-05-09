@@ -67,4 +67,4 @@ The WebWorldWind development team has identified several alternatives for provid
 # Next Steps
     
 * [Home](../../)
-* [Lesson 4.3: WorldWind Website](https://worldwind.arc.nasa.gov/)
+* [WorldWind Website](https://worldwind.arc.nasa.gov/)
