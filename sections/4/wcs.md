@@ -27,7 +27,7 @@ WebWorldWind WMS and WMTS operations have required the client to create the url 
     WorldWind.WebCoverageService.create(serviceAddress);
     ```
     
-2. A `Promise` provides a `then` function which passes the asynchronous result of the `Promise`. For the `WebCoverageService.create` function the callback value returned is the fully configured `WebCoverageService`; The `WebCoverageService` maintains references to the capabilities and coverage description documents of the WCS. It also maintains an array of `WcsCoverage` objects representing the available coverages from the WCS. The `WcsCoverage` object is a simple object which contains common properties of a coverage that different components of WebWorldWind might utilize (`Sector`, resolution, etc.) In this step, lets add functionality which adds a list of the names and resolutions of the coverages available from the WorldWind26 server below the globe canvas:
+2. A `Promise` provides a `then` function which passes the asynchronous result of the `Promise`. For the `WebCoverageService.create` function the callback value returned is the fully configured `WebCoverageService`; The `WebCoverageService` maintains references to the capabilities and coverage description documents of the WCS. It also maintains an array of `WcsCoverage` objects representing the available coverages from the WCS. The `WcsCoverage` object is a simple object which contains common properties of a coverage that different components of WebWorldWind might utilize (`Sector`, resolution, etc.) In this step, lets add functionality which adds a list of the names and resolutions of the coverages available from the WorldWind26 server on the globe canvas:
 
     ```javascript
     var serviceAddress = "https://worldwind26.arc.nasa.gov/wcs";
@@ -43,6 +43,8 @@ WebWorldWind WMS and WMTS operations have required the client to create the url 
            }
        });
     ```
+
+    <script async src="//jsfiddle.net/nasazach/3j3zx43k/embed/"></script>
 
 3. The `WcsCoverage` object maintains a bundle of commonly used properties. It abstracts the WCS object model format to communicate common properties required by WebWorldWind
 
