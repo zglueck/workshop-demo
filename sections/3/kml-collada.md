@@ -30,7 +30,29 @@
     ```
     
     <script async src="//jsfiddle.net/nasazach/md54krc8/embed/"></script>
- 
+    
+## Collada
+
+1. WebWorldWind supports the Collada format for 3D models. Let's load and add a satellite model to the previous KML example. The Collada constructor takes a `Positon`:
+
+    ```javascript
+    var position = new WorldWind.Position(10, -5, 600000);
+    var colladaLoader = new WorldWind.ColladaLoader(position);
+    ```
+    
+2. To load, we need the filename of model to load and a callback which provides the fully configured model which can then be added to the renderable layer:
+
+    ```javascript
+    var modelAddress = "https://zglueck.github.io/workshop-demo/resources/data/satellite.dae";
+    colladaLoader.load(modelAddress, function (model) {
+            model.scale = 500;
+            renderableLayer.addRenderable(model);
+            wwd.goTo(new WorldWind.Position(10, -5, 750000));   
+        });
+    ```
+    
+    <script async src="//jsfiddle.net/nasazach/9vrae478/embed/"></script>
+    
 # Next Steps
     
 * [Home](../../)
