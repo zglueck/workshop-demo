@@ -21,10 +21,10 @@
    * OGC Web Map Tile Service (WMTS)
    * GeoTIFF
 * [Lesson 3.2: Formats](sections/3/formats.html)
-   * GeoJSON
-   * OGC WKT 
-   * OGC KML and Collada
-   * Shapefile
+    * GeoJSON
+    * OGC WKT
+    * Shapefile
+* [Lesson 3.3: KML and Collada](sections/3/kml-collada.html)
  
 ## 4. [Next Steps for WorldWind](sections/4/)
 * [Sneak Peek: OGC Web Coverage Service (WCS) and compound elevations](sections/4/wcs.html)
