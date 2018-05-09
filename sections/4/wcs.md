@@ -64,8 +64,8 @@ Next, we get the WCS capabilities and select a coverage for this lesson.
 ```javascript
 var serviceAddress = "https://worldwind26.arc.nasa.gov/wcs";
 WorldWind.WebCoverageService.create(serviceAddress).then(function (webCoverageService) {
-    // select the first coverage for this lesson; your application will likely look for a specific coverage by name, or let the user choose the coverage
-    var coverage = webCoverageService.coverages[0]; 
+    // we happen to know that coverage 2 contains SRTM elevations; your application will likely look for a specific coverage by name, or let the user choose the coverage
+    var coverage = webCoverageService.coverages[2];
     displayCoverage(coverage);
 });
 ```
