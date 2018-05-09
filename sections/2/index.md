@@ -8,7 +8,7 @@
 * [Lesson 2.6: Polygons and Paths](shapes.html)
 * [Lesson 2.7: Text](text.html)
 * [Lesson 2.8: Selection](selection.html)
-* [Lesson 2.9: Using UI Frameworks: React](https://github.com/emxsys/worldwind-react-app)
+* [Lesson 2.9: Using UI Frameworks: React](https://emxsys.github.io/worldwind-react-app)
 
 # Next Steps
 
