@@ -66,9 +66,51 @@ wwd.addLayer(formatsLayer);
     geojsonParser.load(onLoad, onConfigureShape, formatsLayer);
     ```
     
-    <script async src="//jsfiddle.net/nasazach/v89g9emL/1/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/rf9c3xgp/embed/"></script>
 
 4. The `geometry` property provided in the callback allows you to interogate the GeoJSON shape and assign attributes based on the type of shape. For a more in depth example, see the GeoJSON example ([source](https://github.com/NASAWorldWind/WebWorldWind/examples/GeoJSON.js), [live demo](https://files.worldwind.arc.nasa.gov/apps/web/examples/GeoJSON.html)) included in the repository.
+
+## Well Known Text (WKT)
+
+1. The WKT parser takes a text string during construction and then parses and displays the contents on the globe. Like GeoJSON, a `load` method invocation takes completion and configuration callbacks as well as a destination layer. Let's add some sample shapes and a simple completion callback inline. Take note that the custom inline completion callback requires invocation of `wkt.defaultParserCompletionCallback`:
+
+    ```javascript
+    var wktData = "POLYGON ((40 -70, 45 -80, 40 -90))";
+    var wkt = new WorldWind.Wkt(wktData);
+    wkt.load(function (wkt, objects) {
+           alert("WKT Loaded");
+           wkt.defaultParserCompletionCallback(wkt, objects);
+       }, null, formatsLayer);
+    ```
+    
+    <script async src="//jsfiddle.net/nasazach/44sggeo6/embed/"></script>
+    
+2. Visual attribute customization is similar to GeoJSON. Let's configure the color of different types of WKT objects using a custom shape configuration:
+
+    ```javascript
+    var onConfigureShape = function(shape) {
+       if (shape.type == WorldWind.WktType.SupportedGeometries.POLYGON) {
+           var shapeAttributes = new WorldWind.ShapeAttributes(null);
+           shapeAttributes.interiorColor = WorldWind.Color.GREEN;
+           shapeAttributes.outlineColor = WorldWind.Color.BLUE;
+           return {
+               attributes: shapeAttributes
+           };
+       }
+    }
+    ```
+    
+    The shape configuration callback passes the current WKT shape which is an extension of [WktObject](https://nasaworldwind.github.io/WebWorldWind/WktObject.html). We're using the `type` property to identify specific types of WKT shapes to apply custom colors. For clarity, let's remove the inline completion callback so the `load` invocation should now look like:
+    
+    ```javascript
+    wkt.load(null, onConfigureShape, formatsLayer);
+    ``` 
+    
+    <script async src="//jsfiddle.net/nasazach/0dbb4nj5/embed/"></script>
+    
+3. Take a look at the [Well Known Text example](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/wkt.html) which features live editing of well known text.
+
+
  
 # Next Steps
     
