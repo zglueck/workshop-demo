@@ -108,11 +108,84 @@ wwd.addLayer(formatsLayer);
     
     <script async src="//jsfiddle.net/nasazach/0dbb4nj5/embed/"></script>
     
-3. Take a look at the [Well Known Text example](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/wkt.html) which features live editing of well known text.
+3. Take a look at the [Well Known Text example](https://files.worldwind.arc.nasa.gov/artifactory/apps/web/examples/Wkt.html) which features live editing of well known text.
 
+## Shapefiles
 
+1. Shapefile parsing takes the URL for the shapefile during construction and then utilizes the similar `load` invocation with callbacks as GeoJSON and Wkt. Let's load a shapefile and customize the appearance with a custom shape configuration callback. We'll use a Placemark for points and to customize the placemark appearance we need to define the PlacemarkAttributes:
+
+    ```javascript
+    var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+    placemarkAttributes.imageScale = 0.025;
+    placemarkAttributes.imageColor = WorldWind.Color.WHITE;
+    placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+        WorldWind.OFFSET_FRACTION, 0.5,
+        WorldWind.OFFSET_FRACTION, 1.0);
+    placemarkAttributes.imageSource = WorldWind.configuration.baseUrl + "images/white-dot.png";
+    ```
+
+2. Next, we can build a branching logic shape configuration callback. It will branch on the shapefile data type and apply either a Placemark, or random color for polygon types:
+
+    ```javascript
+    var onConfigureShape = function (attributes, record) {
+        var configuration = {};
+        configuration.name = attributes.values.name || attributes.values.Name || attributes.values.NAME;
+
+        if (record.isPointType()) {
+            configuration.name = attributes.values.name || attributes.values.Name || attributes.values.NAME;
+
+            configuration.attributes = new WorldWind.PlacemarkAttributes(placemarkAttributes);
+
+            if (attributes.values.pop_max) {
+                var population = attributes.values.pop_max;
+                configuration.attributes.imageScale = 0.01 * Math.log(population);
+            }
+        } else if (record.isPolygonType()) {
+            configuration.attributes = new WorldWind.ShapeAttributes(null);
+
+            // Fill the polygon with a random pastel color.
+            configuration.attributes.interiorColor = new WorldWind.Color(
+                0.375 + 0.5 * Math.random(),
+                0.375 + 0.5 * Math.random(),
+                0.375 + 0.5 * Math.random(),
+                1.0);
+
+            // Paint the outline in a darker variant of the interior color.
+            configuration.attributes.outlineColor = new WorldWind.Color(
+                0.5 * configuration.attributes.interiorColor.red,
+                0.5 * configuration.attributes.interiorColor.green,
+                0.5 * configuration.attributes.interiorColor.blue,
+                1.0);
+        }
+
+        return configuration;
+    };
+    ```
+    
+3. We now need to create the `Shapefile` object using the URL of the data and then `load` with our shape configuration callback and desired layer:
+
+    ```javascript
+    var shapefileLibrary = "https://worldwind.arc.nasa.gov/web/examples/data/shapefiles/naturalearth";
+    var worldShapefile = new WorldWind.Shapefile(shapefileLibrary + "/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp");
+    worldShapefile.load(null, onConfigureShape, formatsLayer);
+    ```
+    
+    <script async src="//jsfiddle.net/nasazach/dsqsp1Lq/embed/"></script>
+    
+4. Since we added generic branching logic to the shape configuration callback, we can reuse it with different data types:
+
+    ```javascript
+    var cityShapefile = new WorldWind.Shapefile(shapefileLibrary + "/ne_50m_populated_places_simple/ne_50m_populated_places_simple.shp");
+    cityShapefile.load(null, onConfigureShape, formatsLayer);
+    ```
+    
+    <script async src="//jsfiddle.net/nasazach/mtkn3e2v/embed/"></script>
+
+# Conclusion
+
+The format parsers allow GeoJSON, Well Known Text, and Shapefiles to be displayed in WebWorldWind. They utilize a similar pattern of initializing with the data source in the constructor then configuring and displaying with the invocation of the `load` method and the optional callbacks.
  
 # Next Steps
     
 * [Home](../../)
-* [Lesson 3.2: Formats](kml-collada.html)
+* [Lesson 3.3: KML and Collada](kml-collada.html)
