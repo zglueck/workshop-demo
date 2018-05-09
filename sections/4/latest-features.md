@@ -50,7 +50,7 @@ To build WebWorldWind from the latest source hosted on GitHub, follow these step
     - `dist`: the unzipped contents of the WebWorldWind-Distribution zip file
     - `test-report`: test output reports
     
-    To build your application you will need a minimum of one of the provided libraries (worldwind.js or worldwind.min.js). It is also recommended to include the images directory if you plan on displaying the `CompassLayer`, `ViewControlsLayer`, or `StarFieldLayer`. The images directory provides the images and data for those layers. The images directory should be placed at the root of the file server.
+    To build your application you will need a minimum of one of the provided libraries (worldwind.js or worldwind.min.js). Finally, WorldWind’s npm package requires that you publish the images folder in your npm-based project’s web root.
     
 7. To retrieve the latest updates of WebWorldWind simply:
 
