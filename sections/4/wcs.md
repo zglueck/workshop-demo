@@ -66,14 +66,13 @@ var serviceAddress = "https://worldwind26.arc.nasa.gov/wcs";
 WorldWind.WebCoverageService.create(serviceAddress).then(function (webCoverageService) {
     // we happen to know that coverage 2 contains SRTM elevations; your application will likely look for a specific coverage by name, or let the user choose the coverage
     var coverage = webCoverageService.coverages[2];
-    displayCoverage(coverage);
 });
 ```
 
 WebCoverageService has a list of `WcsCoverage` instances retrieved from the service. Each WcsCoverage instance has an `elevationConfig` property that can be used to construct a WorldWind elevation coverage.
 
 ```javascript
-var elevationCoverage = WorldWind.TiledElevationCoverage(coverage.elevationConfig);
+var elevationCoverage = new WorldWind.TiledElevationCoverage(coverage.elevationConfig);
 elevationModel.addCoverage(elevationCoverage);
 ```
 
