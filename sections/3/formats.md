@@ -179,7 +179,7 @@ wwd.addLayer(formatsLayer);
     cityShapefile.load(null, onConfigureShape, formatsLayer);
     ```
     
-    <script async src="//jsfiddle.net/nasazach/mtkn3e2v/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/37eam4dg/embed/"></script>
 
 # Conclusion
 
