@@ -6,8 +6,8 @@
 
 ## 2. [Essential WorldWind Features](sections/2/)
 * [Lesson 2.1: Concepts](sections/2/concepts.html)
-* [Lesson 2.2: Initialization](sections/2/initialization.html)
-* [Lesson 2.3: Built In Layers](sections/2/built-in-layers.html)
+* [Lesson 2.2: WorldWindow](sections/2/initialization.html)
+* [Lesson 2.3: Layers](sections/2/built-in-layers.html)
 * [Lesson 2.4: Navigation](sections/2/navigation.html)
 * [Lesson 2.5: Placemarks](sections/2/placemarks.html)
 * [Lesson 2.6: Polygons and Paths](sections/2/shapes.html)
