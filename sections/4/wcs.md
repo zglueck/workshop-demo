@@ -72,7 +72,7 @@ WorldWind.WebCoverageService.create(serviceAddress).then(function (webCoverageSe
 WebCoverageService has a list of `WcsCoverage` instances retrieved from the service. Each WcsCoverage instance has an `elevationConfig` property that can be used to construct a WorldWind elevation coverage.
 
 ```javascript
-var elevationCoverage = WorldWind.TiledElevationCoverage(coverage.elevationConfig);
+var elevationCoverage = new WorldWind.TiledElevationCoverage(coverage.elevationConfig);
 elevationModel.addCoverage(elevationCoverage);
 ```
 
