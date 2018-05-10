@@ -39,4 +39,4 @@ Web WorldWind doesn't typically distinguish whether it's running on a machine wi
 # Next Steps
     
 * [Home](../../)
-* [Lesson 2.3: Built In Layers](./built-in-layers.html)
+* [Lesson 2.3: Layers](./built-in-layers.html)
