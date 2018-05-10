@@ -8,7 +8,7 @@
 
 WorldWindow is the fundamental Web WorldWind object. It represents the presence of Web WorldWind in the web page. Almost all interactions between the app and Web WorldWind occur through a WorldWindow.
 
-A WorldWindow encapsulates an HTML canvas element. The app developer is responsible for creating the canvas, typically by defining a <canvas> element in static HTML. 
+A WorldWindow encapsulates an HTML canvas element. The app developer is responsible for creating the canvas, typically by defining a \<canvas\> element in static HTML. 
 
 ```html
 <canvas id="globe"></canvas>
