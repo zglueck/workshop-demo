@@ -75,16 +75,16 @@ If you require more explicit control of the navigator, the position, and orienta
     var heading = wwd.navigator.heading;
     ```
     
-    <script async src="//jsfiddle.net/nasazach/14ufn7hL/15/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/j09jLdk7/embed/"></script>
 
 2. Set the position of the navigator to view Mount Yale in Colorado:
 
     ```
-    wwd.navigator.lookAtLocation.latitude = 38.87165744775558;
+    wwd.navigator.lookAtLocation.latitude = 38.8442;
     ...
     ```
     
-    <script async src="//jsfiddle.net/nasazach/14ufn7hL/16/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/0zwx6z85/embed/"></script>
 
 3. Continuously modify the heading to rotate the view to see the surrounding peaks:
 
@@ -95,7 +95,7 @@ If you require more explicit control of the navigator, the position, and orienta
       }, 10);
     ```
     
-    <script async src="//jsfiddle.net/nasazach/14ufn7hL/17/embed/"></script>
+    <script async src="//jsfiddle.net/nasazach/14ufn7hL/embed/"></script>
 
 # Next Steps
     
