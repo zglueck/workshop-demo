@@ -91,7 +91,7 @@ And some visual effects.
 
 Here's a demonstration of different layers added to WorldWindow. We'll utilize these layers in follow-on lessons.
     
-    <script async src="//jsfiddle.net/nasazach/hjatdgbz/4/embed/"></script>
+<script async src="//jsfiddle.net/nasazach/hjatdgbz/4/embed/"></script>
 
 # Next Steps
     
