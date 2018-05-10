@@ -37,7 +37,7 @@ Layers have the following properties:
 * _opacity_ - A number between 0 and 1 that enables you to make an layer and its contents semi-transparent. A value of 1 means fully opaque. A value of 0 means fully transparent.
 * _minActiveAltitude_ - A number specifying the eye altitude above which the layer is displayed. The layer is not displayed if the eye altitude is below this value.
 * _maxActiveAltitude_ - A number specifying the eye altitude below which the layer is displayed. The layer is not displayed if the eye altitude is above this value.
-_inCurrentFrame_ - A read-only boolean indicating whether the layer was actually drawn during the most recent redraw. A layer may not be drawn for several reasons, such as the eye altitude has not reached the max active altitude.
+* _inCurrentFrame_ - A read-only boolean indicating whether the layer was actually drawn during the most recent redraw. A layer may not be drawn for several reasons, such as the eye altitude has not reached the max active altitude.
 See the API doc for Layer for more details.
 
 There are several types of layers. Each defines additional properties that you can use to control the layer's behavior. See the API doc for the particular layer to discover those properties. The layer type you're likely to use most is RenderableLayer, which you use to hold shapes. It's described below. Apps typically create several of these.
