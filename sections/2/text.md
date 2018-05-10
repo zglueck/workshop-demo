@@ -1,11 +1,12 @@
-# WebWorldWind Text
+# Text
 
-WorldWind provides two classes that can be used to associate a text label with a geographic coordinate, or a screen point:
+WorldWind provides three classes that can be used to associate a text label with a geographic coordinate, or a screen point:
 
-* `GeographicText` - Text drawn at any geographic position and altitude
-* `ScreenText` - Text drawn in the plane of the screen
+* GeographicText - Text drawn at any geographic position and altitude
+* ScreenText - Text drawn in the plane of the screen
+* Annotation - Text drawn in a balloon with a leader pointing at the annotation's geographic position
 
-Like WorldWind's placemarks and shapes, the text classes implement the `Renderable` interface. The built-in `RenderableLayer` provides a simple mechanism for adding text to the WorldWind globe. RenderableLayer can contain a heterogeneous mix of objects that implement Renderable.
+Like WorldWind's placemarks and shapes, text classes implement the Renderable interface. RenderableLayer provides a simple mechanism for adding text to the WorldWind globe. RenderableLayer can contain a text, shapes, and anything else that implements Renderable.
 
 ```javascript
 var textLayer = new WorldWind.RenderableLayer("Text Layer");
@@ -31,9 +32,9 @@ textLayer.addRenderable(mountShastaText);
 
 All WorldWind shapes defined by geographic positions have an `altitudeMode` property that indicates the relationship of the positions' altitudes relative to the terrain, including GeographicText. There are three possible values:
 
-* `WorldWind.ABSOLUTE` - The altitude is treated as a distance relative to the surface of the ellipsoid
-* `WorldWind.RELATIVE_TO_GROUND` - The altitude is treated as a distance from the terrain at the position's latitude and longitude
-* `WorldWind.CLAMP_TO_GROUND` - The altitude is ignored and the position is treated as being on the terrain at its latitude and longitude
+* WorldWind.ABSOLUTE - The altitude is treated as a distance relative to the surface of the ellipsoid.
+* WorldWind.RELATIVE_TO_GROUND - The altitude is treated as a distance from the terrain at the position's latitude and longitude.
+* WorldWind.CLAMP_TO_GROUND - The altitude is ignored and the position is treated as being on the terrain at its latitude and longitude.
 
 Suppose we don't know the altitude for our text label, or we want the label to stay at a height relative to WorldWind's terrain. We can accomplish this by configuring GeographicText with a relative-to-ground altitude mode.
 
@@ -47,7 +48,7 @@ textLayer.addRenderable(mountEddyText);
 
 ## Screen Text
 
-Screen text associates a text label with a screen point. WorldWind's `Offset` class provides a flexible mechanism for configuring screen text placement. Offset contains two coordinates, and each can be independently configured as relative to a screen edge, or configured as a fraction of the screen dimensions. We'll create a ScreenText that gives our demo a title, and use an offset that places the text at the screen's top center.
+Screen text associates a text label with a screen point. WorldWind's Offset class provides a flexible mechanism for configuring screen text placement. Offset contains two coordinates, and each can be independently configured as relative to a screen edge, or configured as a fraction of the screen dimensions. We'll create a ScreenText that gives our demo a title, and use an offset that places the text at the screen's top center.
 
 ```javascript
 var textPlacement = new WorldWind.Offset(WorldWind.OFFSET_FRACTION, 0.5, WorldWind.OFFSET_FRACTION, 1.0);
@@ -65,7 +66,7 @@ titleAttributes.font = new WorldWind.Font(32);
 titleText.attributes = titleAttributes;
 ```
 
-ScreenText's `screenOffset` and its TextAttribute's `offset` can be configured to support combination of screen placement and text alignment.  
+ScreenText's _screenOffset_ and its TextAttribute's _offset_ can be configured to support combination of screen placement and text alignment.  
 
 ## Putting it All Together
 
