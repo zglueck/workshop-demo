@@ -13,7 +13,7 @@ The following code depicts six layers. The first two are image layers. The secon
 ```javascript
 // Create and add imagery layers.
 wwd.addLayer(new WorldWind.BMNGLayer());
-wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
+wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer());
 
 // Create and add layers for shapes, but don't add any shapes yet.
 wwd.addLayer(new RenderableLayer());
