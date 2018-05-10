@@ -4,31 +4,92 @@
         height: 700px;
     }    
 </style>
-# WebWorldWind Built In Layers
+# Layers
 
-WebWorldWind provides a number of built in layers for your convienence. Most of the preconfigured layers are imagery layers, providing a quick and easy image data to get running.
+Layers hold all the information displayed by the WorldWindow. Each WorldWindow has a layer list that contains all the layers to display in that WorldWindow. Each layer contains either imagery, shapes or decorations such as a compass. During rendering, layers are displayed in the order they're defined in the layer list. (3D shapes within layers, however, are displayed in far-to-near order.)
 
-In the first lesson, we utilized the `BMNGLayer`, or the Blue Marble Next Generation layer. Some other preconfigured imagery layers include:
+The following code depicts six layers. The first two are image layers. The second two hold shapes. And the bottom two hold decorations.
 
-- BMNGLayer
-- BMNGLandsatLayer
-- BingAerialLayer
-- BingAerialWithLabelsLayer
-- BingRoadsLayer
-- OpenStreetMapImageLayer
+```javascript
+// Create and add imagery layers.
+wwd.addLayer(new WorldWind.BMNGLayer());
+wwd.addLayer(new WorldWind.BingAerialWithLabelsLayer(null));
 
-Besides preconfigured imagery layers, WebWorldWind also includes preconfigured utility layers:
+// Create and add layers for shapes, but don't add any shapes yet.
+wwd.addLayer(new RenderableLayer());
+wwd.addLayer(new RenderableLayer());
 
-- CompassLayer
-- CoordinatesDisplayLayer
-- ViewControlsLayer
+// Create and add a compass and view controls.
+wwd.addLayer(new WorldWind.CompassLayer());
+wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
 
-And to add some cool visual effects:
+// Update the display.
+wwd.redraw();
+```
 
-- AtmosphereLayer
-- StarFieldLayer
+## Layer Properties
 
-This lesson will demonstrate how to add some of these preconfigured layers to the WorldWindow that will be utilized for the remaining lessons.
+Layers have the following properties:
+
+* _displayName_ - A string that you can use to give the layer a name that would be displayed, for example, in a layer manager.
+* _enabled_ - A boolean that enables you to turn the layer off while leaving it in the layer list.
+* _pickEnabled_ - A boolean indicating that the layer and its contents do not participate in picking.
+* _opacity_ - A number between 0 and 1 that enables you to make an layer and its contents semi-transparent. A value of 1 means fully opaque. A value of 0 means fully transparent.
+* _minActiveAltitude_ - A number specifying the eye altitude above which the layer is displayed. The layer is not displayed if the eye altitude is below this value.
+* _maxActiveAltitude_ - A number specifying the eye altitude below which the layer is displayed. The layer is not displayed if the eye altitude is above this value.
+_inCurrentFrame_ - A read-only boolean indicating whether the layer was actually drawn during the most recent redraw. A layer may not be drawn for several reasons, such as the eye altitude has not reached the max active altitude.
+See the API doc for Layer for more details.
+
+There are several types of layers. Each defines additional properties that you can use to control the layer's behavior. See the API doc for the particular layer to discover those properties. The layer type you're likely to use most is RenderableLayer, which you use to hold shapes. It's described below. Apps typically create several of these.
+
+## Image Layers
+
+Image layers hold imagery that is drawn on the surface of the globe. This is typically global-coverage imagery but need not be. Web WorldWind provides the following image layers:
+
+* __Bing Aerial Layer__ (class BingAerialLayer) - Full global coverage using high-resolution Bing satellite imagery.
+* __Bing Aerial with Labels Layer__ (class BingAerialWithLabelsLayer) - Full global coverage using the same imagery as Bing Aerial Layer but with placenames and roads included.
+* __Bing Roads Layer__ (class BingRoadsLayer) - Full global coverage using high-resolution Bing roads imagery.
+* __Blue Marble Layer__ (class BMNGLayer) - Full global coverage using low-resolution Blue Marble imagery.
+* __Blue Marble + Landsat Layer__ (class BMNGLandsatLayer) - Full global coverage using colorized Blue Marble imagery for the oceans and medium-resolution Landsat imagery for land.
+* __Blue Marble Single Image Layer__ (class BMNGOneImageLayer) - Full global coverage using one low-resolution Blue Marble image. This layer is used similarly to a splash screen in order to quickly display imagery on the globe while other higher-resolution imagery is retrieved.
+
+The Bing imagery layers require an API key. The documentation details the steps necessary to specify your API key. You can create your own image layers using TiledImageLayer. The imagery need not span the entire globe.
+
+## Renderable Layer
+
+You use the RenderableLayer class when you want to display shapes. The layer can hold any number of shapes. Apps typically use renderable layers to group shapes logically. To display a shape, you simply create it using its constructor and add it to a renderable layer:
+
+```javascript
+var placemarkLayer = new WorldWind.RenderableLayer("Placemarks");
+var placemark = new WorldWind.Placemark(new WorldWind.Position(latitude, longitude, altitude));
+
+placemarkLayer.addRenderable(placemark);
+```
+
+Here the layer is given the display name "Placemarks". You must also add the renderable layer to the WorldWindow's layer list:
+
+```javascript
+wwd.addLayer(placemarkLayer);
+```
+
+Renderable layers hold any kind of shape.
+
+## Utility Layers and Decorations
+
+Besides image layers and renderable layers, WebWorldWind also includes preconfigured utility layers.
+
+* CompassLayer
+* CoordinatesDisplayLayer
+* ViewControlsLayer
+
+And some visual effects.
+
+* AtmosphereLayer
+* StarFieldLayer
+
+## Layers in Action
+
+Here's a demonstration of different layers added to WorldWindow. We'll utilize these layers in follow-on lessons.
 
 1. Add the `CoordinatesDisplayLayer` to the previous lessons WorldWindow with the `BMNGLayer`.
     ```
@@ -47,10 +108,6 @@ This lesson will demonstrate how to add some of these preconfigured layers to th
     ```
     
     <script async src="//jsfiddle.net/nasazach/hjatdgbz/4/embed/"></script>
-
-Explore the other preconfigured layers by editing the jsFiddle. Consult the [documentation](https://nasaworldwind.github.io/WebWorldWind/) for more information on necessary constructor parameters.
-
-Some imagery layers will require an API key. The documentation details the steps necessary to specify your API key.
 
 # Next Steps
     
