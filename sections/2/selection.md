@@ -75,4 +75,4 @@ Notice that the origin of the rectangle (the first two arguments to the Rectangl
 # Next Steps
 
 * [Home](../..)
-* [Using UI Frameworks: React] (https://emxsys.github.io/worldwind-react-app)
+* [Using UI Frameworks: React](https://emxsys.github.io/worldwind-react-app)
