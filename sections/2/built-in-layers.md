@@ -90,22 +90,6 @@ And some visual effects.
 ## Layers in Action
 
 Here's a demonstration of different layers added to WorldWindow. We'll utilize these layers in follow-on lessons.
-
-1. Add the `CoordinatesDisplayLayer` to the previous lessons WorldWindow with the `BMNGLayer`.
-    ```
-    wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
-    ```
-    _Note: the `WorldWindow` object must be passed for this layer._
-
-2. Add the `AtmosphereLayer`
-    ```
-    wwd.addLayer(new WorldWind.AtmosphereLayer());
-    ```
-
-3. Add the `StarFieldLayer`
-    ```
-    wwd.addLayer(new WorldWind.StarFieldLayer());
-    ```
     
     <script async src="//jsfiddle.net/nasazach/hjatdgbz/4/embed/"></script>
 
