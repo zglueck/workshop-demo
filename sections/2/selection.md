@@ -47,7 +47,7 @@ For deep picking you set the World Window's _deepPicking_ property prior to call
 
 ## Pick Point and Pick Region
 
-The pick point and pick region are specified in screen coordinates, but coordinates relative to the World Window's canvas. Those coordinates can be easily computed using the _canvasCoodinates_ method of the WorldWindow object, as follows in this call to pick:
+The pick point and pick region are specified in screen coordinates, but coordinates relative to the WorldWindow's canvas. Those coordinates can be easily computed using the _canvasCoodinates_ method of the WorldWindow object, as follows in this call to pick:
 
 ```javascript
 var pickList = wwd.pick(wwd.canvasCoordinates(x, y));
@@ -55,7 +55,7 @@ var pickList = wwd.pick(wwd.canvasCoordinates(x, y));
 
 The x and y in this call are the clientX and clientY properties of the event passed to the event handler.
 
-For region picking, the pick region is relative to the upper-left corner of the window. Here is code from the PickAllShapesInRegion example that composes the pick region:
+For region picking, the pick region is relative to the upper-left corner of the window.
 
 ```javascript
 var rectRadius = 50,
@@ -67,3 +67,12 @@ var rectRadius = 50,
 ```
 
 Notice that the origin of the rectangle (the first two arguments to the Rectangle constructor above) is its upper-left corner.
+
+## Picking in Action
+
+<script async src="//jsfiddle.net/pdavidc/vcxfzd3d/embed/"></script>
+
+# Next Steps
+
+* [Home](../..)
+* [Using UI Frameworks: React] (https://emxsys.github.io/worldwind-react-app)
