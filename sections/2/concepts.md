@@ -104,4 +104,4 @@ Web WorldWind is designed to be readily extensible. Developers should feel free 
 # Next Steps
 
 * [Home](../../)
-* [Lesson 2.2: Initialization](./initialization.html)
+* [Lesson 2.2: WorldWindow](./initialization.html)
